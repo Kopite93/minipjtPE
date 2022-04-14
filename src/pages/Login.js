@@ -14,6 +14,7 @@ const Login = () => {
 
   const login = () => {
     dispatch(userActions.LoginSP(userId, pw));
+    window.alert("로그인 성공!");
     navigate("/");
   };
 

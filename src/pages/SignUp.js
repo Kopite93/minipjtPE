@@ -30,6 +30,7 @@ const SignUp = () => {
       return window.alert("비밀번호 확인을 해주세요");
     } else {
       dispatch(userActions.SignUpSP(userId, nickname, pw, checkPw));
+      window.alert("회원가입 완료!");
       navigate("/login");
     }
   };
