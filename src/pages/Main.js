@@ -12,11 +12,6 @@ const Main = () => {
   const navigate = useNavigate();
   const token = sessionStorage.getItem("jwt_token");
 
-  useEffect(() => {
-    dispatch(disLikeDB(1, 1, token));
-    // dispatch(myLikeDB(1, 1, token));
-  }, []);
-
   return (
     <Grid width={"70%"} margin={"0 auto"}>
       <ContentsList />

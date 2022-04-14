@@ -31,7 +31,7 @@ const DetailContents = (props) => {
   useEffect(() => {
     dispatch(postActions.getDetailDB(userInfo.userId, id, token));
     console.log(userInfo.userId);
-  }, [userInfo.userId]);
+  }, [userInfo?.userId]);
 
   return (
     <HeadLine>
@@ -122,7 +122,6 @@ const DetailContents = (props) => {
               <p
                 style={{
                   margin: "5px auto",
-                  border: "1px solid black",
                   width: "300px",
                   wordWrap: "breakWord",
                 }}

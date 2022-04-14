@@ -30,7 +30,7 @@ const AddComments = () => {
     dispatch(
       commentActions.addCommentSP(info, sessionStorage.getItem("jwt_token"))
     );
-    navigate(`/detail/${id}`);
+    window.location.reload();
   };
 
   return (

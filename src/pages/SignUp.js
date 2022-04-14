@@ -95,6 +95,7 @@ const SignUp = () => {
         >
           <p>비밀번호확인</p>
           <Input
+            type={"password"}
             width={"300px"}
             onChange={(e) => setCheckPw(e.target.value)}
           ></Input>

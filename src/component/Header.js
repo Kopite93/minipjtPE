@@ -16,12 +16,13 @@ const Header = () => {
 
   const logout = () => {
     dispatch(userActions.LogOutSP(sessionStorage.getItem("jwt_token")));
+    window.alert("로그아웃 완료!");
     navigate("/");
   };
 
   useEffect(() => {
     dispatch(userActions.LoginCheckSP(sessionStorage.getItem("jwt_token")));
-  }, [userInfo.userId]);
+  }, [userInfo?.userId]);
 
   if (token && userInfo) {
     return (
