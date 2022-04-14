@@ -30,12 +30,12 @@ const Upload = ({ setImage, setPreview }) => {
   };
 
   return (
-      <input
-          type="file"
-          onChange={selectFile}
-          ref={fileInput}
-          disabled={is_uploading}
-      />
+    <input
+      type="file"
+      onChange={selectFile}
+      ref={fileInput}
+      disabled={is_uploading}
+    />
   );
 };
 

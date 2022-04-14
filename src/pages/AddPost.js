@@ -19,6 +19,7 @@ const AddPost = (props) => {
   const post_list = useSelector((state) => state.post.post);
 
   const [image, setImage] = useState();
+  const [preview, setPreview] = useState();
   const [content, setContent] = useState("");
   const [title, setTitle] = useState("");
   const [headinfo, setHeadinfo] = useState("");
@@ -121,7 +122,7 @@ const AddPost = (props) => {
           margin: "20px auto",
         }}
       >
-        <Upload image={image} setImage={setImage} />
+        <Upload image={image} setImage={setImage} setPreview={setPreview} />
       </div>
 
       <Grid padding="16px">
@@ -146,7 +147,7 @@ const AddPost = (props) => {
             alignItems: "center",
           }}
         >
-          <Image width={"50%"} src={image ? image : "img/logo.png"} />
+          <Image width={"50%"} src={preview ? preview : "img/logo.png"} />
         </div>
       </Grid>
 
